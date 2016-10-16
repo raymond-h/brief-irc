@@ -6,9 +6,16 @@
     },
     "extends": "kellyirc",
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "rules": {
-        "require-yield": "off"
-    }
+        "require-yield": "off",
+        "react/jsx-uses-vars": "error"
+    },
+    "plugins": [
+        "react"
+    ]
 }
