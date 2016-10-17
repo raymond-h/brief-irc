@@ -1,12 +1,16 @@
-# brief_irc
+# brief-irc
 Brief IRC
 
 ## Installing
-`npm install brief_irc`
+`git clone *REPO URL*`
 
-## Example usage
-```js
-var brief_irc = require('brief_irc');
+## Development
+```sh
+npm install
 
-// Do whatever you want with 'brief_irc'!
+npm run dev
+
+# open http://localhost:8080/?server=some.irc.server&channel=%23channelname
+# where 'some.irc.server' is a server configured in irc-config.json and 'channelname'
+# is a channel for that server (also stated in config)
 ```
