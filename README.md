@@ -2,7 +2,7 @@
 Brief IRC
 
 ## Installing
-`git clone *REPO URL*`
+`git clone https://github.com/raymond-h/brief-irc`
 
 ## Development
 ```sh
