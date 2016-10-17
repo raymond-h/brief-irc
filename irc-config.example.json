@@ -1,0 +1,8 @@
+[
+    {
+        "server": "irc.some.network.that.exists",
+        "nick": "HurpDurp",
+        "password": "server password",
+        "channels": ["#channel1", "#channel2"]
+    }
+]

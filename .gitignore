@@ -3,3 +3,4 @@ lib/
 public/
 
 *.log
+irc-config.json

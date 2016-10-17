@@ -1,8 +1,48 @@
-.banana {
-    background-color: red;
+html, body, #container {
+    height: 100%;
 }
 
-.apple {
-    background-color: blue;
-    border: 5px purple dashed;
+.main, .input {
+    composes: bg-white from 'tachyons/css/tachyons.css';
 }
+
+.main {
+    composes: h-100 from 'tachyons/css/tachyons.css';
+}
+
+.inner-wrap {
+    composes: mw6 center pa2 from 'tachyons/css/tachyons.css';
+}
+
+.messages {
+    /*composes: pa2 from 'tachyons/css/tachyons.css';*/
+}
+
+.messages-list {
+    composes: list pl0 from 'tachyons/css/tachyons.css';
+}
+
+.message-entry {
+    composes: flex from 'tachyons/css/tachyons.css';
+}
+
+.message-from {
+    composes: b pa2 lh-copy from 'tachyons/css/tachyons.css';
+}
+
+.message-msg {
+    composes: dark-gray pa2 lh-copy from 'tachyons/css/tachyons.css';
+}
+
+.input {
+    composes: input-reset ba w-100 pa1 center b--blue from 'tachyons/css/tachyons.css';
+}
+
+.nick-color-1 { composes: pink from 'tachyons/css/tachyons.css'; }
+.nick-color-2 { composes: red from 'tachyons/css/tachyons.css'; }
+.nick-color-3 { composes: gold from 'tachyons/css/tachyons.css'; }
+.nick-color-4 { composes: green from 'tachyons/css/tachyons.css'; }
+.nick-color-5 { composes: blue from 'tachyons/css/tachyons.css'; }
+.nick-color-6 { composes: purple from 'tachyons/css/tachyons.css'; }
+.nick-color-7 { composes: light-purple from 'tachyons/css/tachyons.css'; }
+.nick-color-8 { composes: navy from 'tachyons/css/tachyons.css'; }
