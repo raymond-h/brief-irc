@@ -6,13 +6,15 @@ import Rx from 'rxjs/Rx';
 
 const setPath = R.curry((path, value, record) => record.set(path, value));
 
+const send = R.curry((ircClient, target, message) => ircClient.msg(target, message));
+
 function whenReady(record) {
     return new Promise(resolve => {
         record.whenReady(resolve);
     });
 }
 
-function eventObservable(event, dsClient) {
+function eventObservable(dsClient, event) {
     return Rx.Observable.fromEventPattern(
         (h) => dsClient.event.subscribe(event, h),
         (h) => dsClient.event.unsubscribe(event, h)
@@ -35,14 +37,14 @@ async function manageClientChannel(config, dsClient, ircClient, channel) {
         .debounceTime(20)
         .subscribe(setPath('messages', R.__, channelRecord));
 
-    eventObservable('send-message', dsClient)
+    eventObservable(dsClient, 'send-message')
         .filter(R.allPass([
             R.propEq('server', config.server),
             R.propEq('channel', channel)
         ]))
         .subscribe(R.pipe(
             R.prop('message'),
-            R.curryN(2, ::ircClient.msg)(channel)
+            send(ircClient, channel)
         ));
 }
 
