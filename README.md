@@ -2,12 +2,16 @@
 Brief IRC
 
 ## Installing
-`git clone https://github.com/raymond-h/brief-irc`
+```sh
+git clone https://github.com/raymond-h/brief-irc
+
+cd brief-irc
+
+npm install
+```
 
 ## Development
 ```sh
-npm install
-
 npm run dev
 
 # open http://localhost:8080/?server=some.irc.server&channel=%23channelname
